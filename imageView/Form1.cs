@@ -70,7 +70,7 @@ namespace imageView
 
         private void btn_son_Click(object sender, EventArgs e)
         {
-            hangiresim = resimler.Length;
+            hangiresim = resimler.Length-1;
             pictureBox1.Image = Image.FromFile(resimler[hangiresim]);
 
         }
@@ -87,8 +87,10 @@ namespace imageView
             
             button1++;
             timer1.Start();
+            btn_slayt.Text = "durdur";
             if (button1==2)
             {
+                btn_slayt.Text="Slayt";
                 timer1.Stop();
                 button1 = 0;
             }
@@ -111,7 +113,7 @@ namespace imageView
         {
             if (hangiresim ==0)
             {
-                hangiresim = 0;
+                hangiresim = resimler.Length-1;
             }
             else
             {
