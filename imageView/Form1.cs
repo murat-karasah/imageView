@@ -70,7 +70,7 @@ namespace imageView
 
         private void btn_son_Click(object sender, EventArgs e)
         {
-            hangiresim = resimler.Length - 1;
+            hangiresim = resimler.Length;
             pictureBox1.Image = Image.FromFile(resimler[hangiresim]);
 
         }
@@ -78,7 +78,7 @@ namespace imageView
         private void btn_random_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            pictureBox1.Image = Image.FromFile(resimler[rnd.Next(0, resimler.Length - 1)]);
+            pictureBox1.Image = Image.FromFile(resimler[rnd.Next(0, resimler.Length)]);
 
         }
 
